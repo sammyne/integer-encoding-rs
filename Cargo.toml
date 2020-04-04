@@ -9,4 +9,19 @@ license-file = "LICENSE"
 keywords = ["integer", "varint", "zigzag", "protobuf", "serialize"]
 edition = "2018"
 
+exclude = ["/tests/sgx/*"]
+
 [dependencies]
+
+[dependencies.sgx_tstd]
+git = "https://github.com/apache/teaclave-sgx-sdk"
+rev = "v1.1.1"
+
+[dependencies.sgx_tunittest]
+git = "https://github.com/apache/teaclave-sgx-sdk"
+optional = true
+rev = "v1.1.1"
+
+[features]
+default = []
+testing = ["sgx_tunittest"]
