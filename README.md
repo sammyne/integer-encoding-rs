@@ -2,6 +2,7 @@
 
 [![crates.io](https://img.shields.io/crates/v/integer-encoding.svg)](https://crates.io/crates/integer-encoding)
 [![Build Status](https://travis-ci.org/dermesser/integer-encoding-rs.svg?branch=master)](https://travis-ci.org/dermesser/integer-encoding-rs)
+![rsgx](https://github.com/sammyne/integer-encoding-rs/workflows/rsgx/badge.svg?branch=rsgx1.1.1)
 
 [full documentation](https://docs.rs/integer-encoding/)
 
