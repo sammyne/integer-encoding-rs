@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.10)
 
 ExternalProject_Add(teaclave-sgx-sdk
     GIT_REPOSITORY https://github.com/apache/incubator-teaclave-sgx-sdk

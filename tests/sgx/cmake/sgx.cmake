@@ -15,7 +15,12 @@ else()
    message(FATAL_ERROR "unknown build type: ${CMAKE_BUILD_TYPE}")
 endif()
 
-set(sgxPath /opt/intel/sgxsdk)
+if(DEFINED ENV{SGX_SDK})
+   set(sgxPath $ENV{SGX_SDK})
+else()
+   set(sgxPath /opt/intel/sgxsdk)
+endif()
+
 set(sgxLibPath ${sgxPath}/lib64)
 
 # tools
