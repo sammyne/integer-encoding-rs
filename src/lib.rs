@@ -15,6 +15,11 @@
 //! }
 //! ```
 
+#![no_std]
+
+#[macro_use]
+extern crate sgx_tstd as std;
+
 mod fixed;
 mod fixed_tests;
 
@@ -31,3 +36,6 @@ pub use reader::FixedIntReader;
 pub use reader::VarIntReader;
 pub use writer::FixedIntWriter;
 pub use writer::VarIntWriter;
+
+#[cfg(feature = "with-testing")]
+pub mod tests;

@@ -1,9 +1,16 @@
-#[cfg(test)]
+//#[cfg(test)]
+#[cfg(feature = "with-testing")]
 mod tests {
+    use std::prelude::v1::*;
+
     use crate::fixed::FixedInt;
 
     use crate::reader::FixedIntReader;
     use crate::writer::FixedIntWriter;
+
+    use testing::{generate_runner, test};
+
+    generate_runner!();
 
     #[test]
     fn test_u32_enc() {
@@ -93,13 +100,13 @@ mod tests {
         assert!(reader.read_fixedint::<u32>().is_err());
     }
 
-    #[should_panic]
     #[test]
+    #[should_panic]
     fn test_invalid_decode_size() {
         assert_eq!(33, u64::decode_fixed(&[1, 0, 0, 0, 0, 1]));
     }
-    #[should_panic]
     #[test]
+    #[should_panic]
     fn test_invalid_encode_size() {
         let mut buf = [0 as u8; 4];
         (11 as u64).encode_fixed(&mut buf);

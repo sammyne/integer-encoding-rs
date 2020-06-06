@@ -1,8 +1,13 @@
-#[cfg(test)]
+//#[cfg(test)]
+#[cfg(feature = "with-testing")]
 mod tests {
+    use std::prelude::v1::*;
+
     use crate::reader::VarIntReader;
     use crate::varint::VarInt;
     use crate::writer::VarIntWriter;
+
+    use testing::test;
 
     #[test]
     fn test_required_space() {
