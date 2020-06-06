@@ -27,6 +27,3 @@ optional    = true
 [features]
 default = []
 with-testing = ["inventory", "testing"]
-
-[patch."https://github.com/sammyne/teaclave-testing"]
-testing = { path = "/root/code/teaclave-testing" }
